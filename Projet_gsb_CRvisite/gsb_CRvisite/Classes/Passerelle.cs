@@ -410,9 +410,9 @@ namespace gsb_CRvisite.Classes
             MySqlConnection cnx = InitConnection();
             if (cnx != null)
             {
-                string query = "select medicament.*, offrir.quantite from medicament, offrir where offrir.idRapport = " + idRapport
-                    + " AND offrir.idMedicament = medicament.id ORDER BY nomCommercial";
+                string query = "select medicament.*, offrir.quantite from medicament, offrir where offrir.idRapport = @idRapport AND offrir.idMedicament = medicament.id ORDER BY nomCommercial";
                 MySqlCommand cmd = new MySqlCommand(query, cnx);
+                cmd.Parameters.AddWithValue("@idRapport", idRapport);
                 MySqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {

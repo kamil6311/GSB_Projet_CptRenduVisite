@@ -71,7 +71,7 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Médicaments offerts" Width="350" x:Name="Medics" DisplayMemberBinding="{Binding Medicament}"/>
-                    <GridViewColumn Header="Quantité" x:Name="Quantite" Width="105" DisplayMemberBinding="{Binding Quantite}"/>
+                    <GridViewColumn Header="Quantité" x:Name="Quantite" Width="103" DisplayMemberBinding="{Binding Quantite}"/>
                 </GridView>
             </ListView.View>
         </ListView>

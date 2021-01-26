@@ -8,7 +8,7 @@ namespace gsb_CRvisite.Classes
 {
     public class EchantillonOffert
     {
-        public EchantillonOffert(Medicament LeMedicament, int quantite)
+        public EchantillonOffert(Medicament LeMedicament, int Quantite)
         {
             quantite = Quantite;
             leMedicament = LeMedicament;

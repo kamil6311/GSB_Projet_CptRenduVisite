@@ -26,7 +26,7 @@ namespace gsb_CRvisite
             InitializeComponent();
             ListeVisiteurs.ItemsSource = Manager.ChargerLesVisiteurs();
             ListeMedecins.ItemsSource = Manager.ChargerMedecins();
-        }
+        } 
 
         private void selectVisiteur(object sender, SelectionChangedEventArgs e)
         {
