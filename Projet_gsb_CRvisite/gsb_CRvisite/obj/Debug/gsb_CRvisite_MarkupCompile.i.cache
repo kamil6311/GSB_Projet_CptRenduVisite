@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\SIO 2\ppe\GSB_Projet_CptRenduVisite\Projet_gsb_CRvisite\gsb_CRvisite\App.xaml
-61699273681
+7-1220324154
 
-241889131604
-14846346597
-frmAccueil.xaml;frmAjoutMedicament.xaml;frmMedecin.xaml;frmMedicament.xaml;frmRapport.xaml;MainWindow.xaml;
+251783183814
+161285873961
+frmAccueil.xaml;frmAjoutMedicament.xaml;frmMedecin.xaml;frmMedicament.xaml;frmRapport.xaml;frmSuprimerMedicament.xaml;MainWindow.xaml;
 
-False
+True
 

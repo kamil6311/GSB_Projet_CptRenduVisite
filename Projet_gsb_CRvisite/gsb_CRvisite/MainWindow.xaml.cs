@@ -83,5 +83,12 @@ namespace gsb_CRvisite
             frmAccueil accueil = new frmAccueil();
             contentControl.Content = accueil;
         }
+
+        private void ClickSupprimerMedicament(object sender, RoutedEventArgs e)
+        {
+            FermerMed();
+            frmSuprimerMedicament supprimer = new frmSuprimerMedicament();
+            contentControl.Content = supprimer;
+        }
     }
 }

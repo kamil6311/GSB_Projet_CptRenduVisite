@@ -121,5 +121,9 @@ namespace gsb_CRvisite.Classes
         {
             return Passerelle.GetVisiteur(idVisiteur);
         }
+        public static bool SupprimerMedicament(string idMedicament)
+        {
+            return Passerelle.SupprimerMedicament(idMedicament);
+        }
     }
 }

@@ -44,6 +44,30 @@ namespace gsb_CRvisite.Classes
             return m;
         }
 
+        public static bool SupprimerMedicament(string idMedicament)
+        {
+            bool res = false;
+            MySqlConnection cnx = InitConnection();
+
+            if(cnx != null)
+            {
+                try
+                {
+                    string query = "delete from medicament where id = @id";
+                    MySqlCommand cmd = new MySqlCommand(query, cnx);
+                    cmd.Parameters.AddWithValue("@id", idMedicament);
+                    cmd.ExecuteNonQuery();
+
+                    res = true;
+                }
+                catch
+                {
+                    res = false;
+                }
+            }
+            return res;
+        }
+
         public static List<Medicament> GetLesMedicament()
         {
             List<Medicament> listeMed = new List<Medicament>();

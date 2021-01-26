@@ -16,7 +16,7 @@
                 <MenuItem Header="_Gérer">
                     <MenuItem Header="Ajouter" Click="ClickGereMedicament"/>
                     <MenuItem Header="Modifier"/>
-                    <MenuItem Header="Supprimer"/>
+                    <MenuItem Header="Supprimer" Click="ClickSupprimerMedicament"/>
                 </MenuItem>
                 <MenuItem Header="_Liste" Click="ListeMenuClick"/>
             </MenuItem>

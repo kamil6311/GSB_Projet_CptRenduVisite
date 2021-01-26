@@ -89,3 +89,10 @@ E:\SIO 2\ppe\GSB_Projet_CptRenduVisite\Projet_gsb_CRvisite\gsb_CRvisite\obj\Debu
 E:\SIO 2\ppe\GSB_Projet_CptRenduVisite\Projet_gsb_CRvisite\gsb_CRvisite\obj\Debug\frmMedecin.baml
 E:\SIO 2\ppe\GSB_Projet_CptRenduVisite\Projet_gsb_CRvisite\gsb_CRvisite\obj\Debug\frmRapport.g.cs
 E:\SIO 2\ppe\GSB_Projet_CptRenduVisite\Projet_gsb_CRvisite\gsb_CRvisite\obj\Debug\frmRapport.baml
+E:\SIO 2\ppe\GSB_Projet_CptRenduVisite\Projet_gsb_CRvisite\gsb_CRvisite\obj\Debug\frmSuprimerMedicament.g.cs
+E:\SIO 2\ppe\GSB_Projet_CptRenduVisite\Projet_gsb_CRvisite\gsb_CRvisite\obj\Debug\frmSuprimerMedicament.baml
+E:\SIO 2\ppe\GSB_Projet_CptRenduVisite\Projet_gsb_CRvisite\gsb_CRvisite\bin\Debug\MaterialDesignColors.dll
+E:\SIO 2\ppe\GSB_Projet_CptRenduVisite\Projet_gsb_CRvisite\gsb_CRvisite\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\SIO 2\ppe\GSB_Projet_CptRenduVisite\Projet_gsb_CRvisite\gsb_CRvisite\bin\Debug\MaterialDesignColors.pdb
+E:\SIO 2\ppe\GSB_Projet_CptRenduVisite\Projet_gsb_CRvisite\gsb_CRvisite\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\SIO 2\ppe\GSB_Projet_CptRenduVisite\Projet_gsb_CRvisite\gsb_CRvisite\bin\Debug\MaterialDesignThemes.Wpf.xml

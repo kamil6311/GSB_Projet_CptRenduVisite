@@ -37,11 +37,17 @@ namespace gsb_CRvisite
             if(res == true)
             {
                 MessageBox.Show("Le médicament " + m.Id + " a été créé");
+                newId.Text = "";
+                newComposition.Text = "";
+                newContreIndications.Text = "";
+                newEffets.Text = "";
+                newNomC.Text = "";
             }
             else
             {
                 MessageBox.Show("erreur", "erreur", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+
         }
     }
 }

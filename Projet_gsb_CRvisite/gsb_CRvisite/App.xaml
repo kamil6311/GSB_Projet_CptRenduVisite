@@ -4,6 +4,5 @@
              xmlns:local="clr-namespace:gsb_CRvisite"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
     </Application.Resources>
 </Application>

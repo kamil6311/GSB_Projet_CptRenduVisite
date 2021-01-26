@@ -14,7 +14,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <TextBlock Text="Id"/>
-            <TextBox Width="120" HorizontalAlignment="Right" Margin="15,0" Height="18" VerticalAlignment="Top" x:Name="newId"/>
+            <TextBox Width="120" HorizontalAlignment="Right" Margin="15,0" Height="20" VerticalAlignment="Top" x:Name="newId"/>
             <TextBlock Text="Effets" Grid.Column="1"/>
             <TextBox Width="120" Grid.Column="1" HorizontalAlignment="Right" Margin="15,0" Height="60" VerticalAlignment="Top" x:Name="newEffets"/>
         </Grid>
@@ -25,7 +25,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <TextBlock Text="Nom Commercial"/>
-            <TextBox Width="120" HorizontalAlignment="Right" Margin="15,0" Height="18" VerticalAlignment="Top" x:Name="newNomC"/>
+            <TextBox Width="120" HorizontalAlignment="Right" Margin="15,0" Height="20" VerticalAlignment="Top" x:Name="newNomC"/>
             <TextBlock Text="Contre Indications" Grid.Column="1"/>
             <TextBox Width="120" Grid.Column="1" HorizontalAlignment="Right" Margin="15,0" Height="60" VerticalAlignment="Top" x:Name="newContreIndications"/>
         </Grid>
