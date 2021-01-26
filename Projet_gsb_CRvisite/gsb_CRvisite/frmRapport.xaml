@@ -25,7 +25,7 @@
 
             <TextBlock Text="Médecin" FontSize="11" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="45,25"/>
             <ComboBox IsEditable="True" Grid.Column="1" Grid.Row="1" Height="22" Name="ListeMedecins"/>
-            <Button Grid.Column="2" Content="Rechercher" Width="90" Grid.Row="1" Height="22"/>
+            <Button Grid.Column="2" Content="Rechercher" Width="90" Grid.Row="1" Height="22" Click="MedecinRechercherClick"/>
 
             <TextBlock Text="Rapports de visites" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="45,0"/>
             <ListBox SelectionChanged="SelectionRapport" Grid.Column="1" Grid.Row="2" Height="58" Name="ListRapports"/>
@@ -70,8 +70,8 @@
         <ListView Height="120" Margin="85,0" x:Name="ListViewMedics">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Médicaments offerts" Width="360" x:Name="Medics"/>
-                    <GridViewColumn Header="Quantité" Width="120" x:Name="Quantite"/>
+                    <GridViewColumn Header="Médicaments offerts" Width="350" x:Name="Medics" DisplayMemberBinding="{Binding Medicament}"/>
+                    <GridViewColumn Header="Quantité" x:Name="Quantite" Width="105" DisplayMemberBinding="{Binding Quantite}"/>
                 </GridView>
             </ListView.View>
         </ListView>

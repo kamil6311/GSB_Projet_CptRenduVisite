@@ -96,9 +96,13 @@ namespace gsb_CRvisite.Classes
         {
             return lesVisiteurs = Passerelle.GetLesVisiteurs();
         }
-        public static List<Int32> ChargerLesIdsRapport(string idVisiteur)
+        public static List<Int32> ChargerLesIdsRapportVisiteur(string idVisiteur)
         {
             return lesId = Passerelle.GetIdsRapportsVisiteur(idVisiteur);
+        }
+        public static List<Int32> ChargerLesIdsRapportMedecin(string idMedecin)
+        {
+            return lesId = Passerelle.GetIdsRapportsMedecin(idMedecin);
         }
         public static Rapport GetRapport(int idRapport)
         {

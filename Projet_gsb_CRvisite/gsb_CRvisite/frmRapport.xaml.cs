@@ -30,23 +30,36 @@ namespace gsb_CRvisite
 
         private void selectVisiteur(object sender, SelectionChangedEventArgs e)
         {
-            ListRapports.ItemsSource = null;
+            //ListRapports.ItemsSource = null;
         }
 
         private void VisiteurRechercherClick(object sender, RoutedEventArgs e)
         {
+            if (ListeVisiteurs.SelectedItem == null) return;
+            ListRapports.ItemsSource = null;
             Visiteur v = ListeVisiteurs.SelectedItem as Visiteur;
-
-            ListRapports.ItemsSource = Manager.ChargerLesIdsRapport(v.Id);
+            ListRapports.ItemsSource = Manager.ChargerLesIdsRapportVisiteur(v.Id);
         }
-
+        private void MedecinRechercherClick(object sender, RoutedEventArgs e)
+        {
+            if (ListeMedecins.SelectedItem == null) return;
+            if (ListRapports.Items != null)
+            {
+                ListRapports.ItemsSource = null;
+                Medecin m = ListeMedecins.SelectedItem as Medecin;
+                ListRapports.ItemsSource = Manager.ChargerLesIdsRapportMedecin(m.Id);
+            }
+            else return;
+        }
         private void SelectionRapport(object sender, SelectionChangedEventArgs e)
         {
             if (ListRapports.SelectedItem == null) return;
 
+            ListViewMedics.Items.Clear();
             int idRapport = (int)ListRapports.SelectedItem;
             Rapport rapport = Manager.GetRapport(idRapport);
             Visiteur visiteur = Passerelle.GetVisiteur(rapport.IdVisiteur);
+            Medecin medecin = Passerelle.GetMedecin(rapport.IdMedecin);
 
             NomVisiteur.Text = visiteur.Nom;
             PrenomVisiteur.Text = visiteur.Prenom;
@@ -54,12 +67,18 @@ namespace gsb_CRvisite
             DateVisite.SelectedDate = rapport.Date;
             BilanVisite.Text = rapport.Bilan;
 
-            //while(Manager.GetLesEchantillonsOfferts(rapport.id) != null)
-            //{
-            //    string
-            //    ListViewMedics.Items.Add()
-            //}
-            //ListViewMedics.ItemsSource = Manager.GetLesEchantillonsOfferts(rapport.Id);
+            NomMedecin.Text = medecin.Nom;
+            AdresseMedecin.Text = medecin.Adresse;
+            PrenomMedecin.Text = medecin.Prenom;
+
+            List<EchantillonOffert> lesEchantillonOffert = Manager.GetLesEchantillonsOfferts(rapport.Id);
+
+            foreach(EchantillonOffert eo in lesEchantillonOffert)
+            {
+                var tab1 = new { Medicament = eo.LeMedicament.NomCommercial, Quantite = eo.Quantite };
+                ListViewMedics.Items.Add(tab1);
+            }
         }
+
     }
 }

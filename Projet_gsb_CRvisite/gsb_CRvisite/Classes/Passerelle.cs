@@ -253,6 +253,30 @@ namespace gsb_CRvisite.Classes
             return listeFamille;
         }
 
+        public static List<Int32> GetIdsRapportsMedecin(string idMedecin)
+        {
+            List<Int32> Ids = new List<Int32>();
+
+            MySqlConnection cnx = InitConnection();
+            if (cnx != null)
+            {
+                string query = "Select id from rapport where idMedecin = @id Order By date DESC";
+
+                MySqlCommand cmd = new MySqlCommand(query, cnx);
+                cmd.Parameters.AddWithValue("@id", idMedecin);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        Ids.Add((int)reader["id"]);
+                    }
+                }
+                reader.Close();
+            }
+            return Ids;
+        }
+
         //Visiteur
         public static List<Visiteur> GetLesVisiteurs()
         {
