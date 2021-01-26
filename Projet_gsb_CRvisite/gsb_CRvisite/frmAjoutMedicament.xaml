@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="gsb_CRvisite.frmAjoutMedicament"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:gsb_CRvisite"
+             mc:Ignorable="d" 
+             d:DesignHeight="480" d:DesignWidth="650" Background="LightGray">
+    <StackPanel Orientation="Vertical">
+        <TextBlock Text="Liste des médecins" HorizontalAlignment="Center" Margin="0,10"/>
+        <Grid Margin="90,40">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Id"/>
+            <TextBox Width="120" HorizontalAlignment="Right" Margin="15,0" Height="18" VerticalAlignment="Top" x:Name="newId"/>
+            <TextBlock Text="Effets" Grid.Column="1"/>
+            <TextBox Width="120" Grid.Column="1" HorizontalAlignment="Right" Margin="15,0" Height="60" VerticalAlignment="Top" x:Name="newEffets"/>
+        </Grid>
+
+        <Grid Margin="90,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Nom Commercial"/>
+            <TextBox Width="120" HorizontalAlignment="Right" Margin="15,0" Height="18" VerticalAlignment="Top" x:Name="newNomC"/>
+            <TextBlock Text="Contre Indications" Grid.Column="1"/>
+            <TextBox Width="120" Grid.Column="1" HorizontalAlignment="Right" Margin="15,0" Height="60" VerticalAlignment="Top" x:Name="newContreIndications"/>
+        </Grid>
+        <Grid Margin="90,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Composition"/>
+            <TextBox Width="120" HorizontalAlignment="Right" Margin="15,0" Height="60" VerticalAlignment="Top" x:Name="newComposition"/>
+            <TextBlock Text="Famille" Grid.Column="1"/>
+            <ComboBox Width="170" Grid.Column="1" HorizontalAlignment="Right" Margin="15,0" Height="21" VerticalAlignment="Top" x:Name="listeFamille"/>
+        </Grid>
+        <Button Content="Créer" Width="55" HorizontalAlignment="Left" Margin="90,0" Click="CreerMedic"/>
+    </StackPanel>
+</UserControl>

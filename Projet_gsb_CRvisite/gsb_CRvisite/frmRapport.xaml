@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="gsb_CRvisite.frmRapport"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:gsb_CRvisite"
+             mc:Ignorable="d" 
+             d:DesignHeight="480" d:DesignWidth="650" Background="LightGray" FontSize="11">
+     <StackPanel Orientation="Vertical">
+        <Grid Margin="40,20,40,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Visiteur" FontSize="11" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="45,0"/>
+            <ComboBox SelectionChanged="selectVisiteur" IsEditable="True" Grid.Column="1" Grid.Row="0" Height="22" x:Name="ListeVisiteurs"/>
+            <Button Grid.Column="2" Content="Rechercher" Width="90" Height="22" Click="VisiteurRechercherClick"/>
+
+            <TextBlock Text="Médecin" FontSize="11" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="45,25"/>
+            <ComboBox IsEditable="True" Grid.Column="1" Grid.Row="1" Height="22" Name="ListeMedecins"/>
+            <Button Grid.Column="2" Content="Rechercher" Width="90" Grid.Row="1" Height="22"/>
+
+            <TextBlock Text="Rapports de visites" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="45,0"/>
+            <ListBox SelectionChanged="SelectionRapport" Grid.Column="1" Grid.Row="2" Height="58" Name="ListRapports"/>
+
+            <TextBlock Text="Visiteur" HorizontalAlignment="Left" Grid.Row="3" Margin="45,10"/>
+            <TextBlock Text="Médecin" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="1" Margin="20,10"/>
+        </Grid>
+        <Grid Margin="50,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Nom" Grid.Row="0" HorizontalAlignment="Left" Margin="50,6,0,6" Width="88"/>
+            <TextBlock Text="Prénom" Grid.Row="1" HorizontalAlignment="Left" Margin="50,6,0,6" Width="88"/>
+            <TextBlock Text="Motif de la visite" Grid.Row="2" HorizontalAlignment="Left" Margin="50,6,0,6" Grid.ColumnSpan="2" Width="128"/>
+            <TextBlock Text="Date de la visite" Grid.Row="3" HorizontalAlignment="Left" Margin="50,6,0,6" Grid.ColumnSpan="2" Width="128"/>
+            <TextBlock Text="Bilan" Grid.Row="4" HorizontalAlignment="Left" Margin="50,6,0,6" Grid.ColumnSpan="2" Width="128"/>
+
+            <TextBox Focusable="False" Grid.Row="0" Grid.Column="1" Height="20" Width="100" FontSize="11" x:Name="NomVisiteur"/>
+            <TextBox Focusable="False" Grid.Row="1" Grid.Column="1" Height="20" Width="100" FontSize="11" x:Name="PrenomVisiteur"/>
+            <TextBox Focusable="False" Grid.Row="2" Grid.Column="1" Height="20" Width="100" FontSize="11" x:Name="MotifVisite"/>
+            <DatePicker Grid.Row="3" Grid.Column="1" Height="20" Width="100" FontSize="11" x:Name="DateVisite"/>
+            <TextBox Focusable="False" Grid.Row="4" Grid.Column="1" Height="20" Width="100" FontSize="11" x:Name="BilanVisite"/>
+
+            <TextBlock Text="Nom" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" Margin="50,6,0,6" Width="88"/>
+            <TextBlock Text="Prénom" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Margin="50,6,0,6" Width="88"/>
+            <TextBlock Text="Motif de la visite" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" Margin="50,6,0,6" Grid.ColumnSpan="2" Width="128"/>
+
+            <TextBox Focusable="False" Grid.Row="0" Grid.Column="3" Height="20" Width="100" FontSize="11" x:Name="NomMedecin"/>
+            <TextBox Focusable="False" Grid.Row="1" Grid.Column="3" Height="20" Width="100" FontSize="11" x:Name="PrenomMedecin"/>
+            <TextBox Focusable="False" Grid.Row="2" Grid.Column="3" Height="20" Width="100" FontSize="11" x:Name="AdresseMedecin"/>
+        </Grid>
+        <ListView Height="120" Margin="85,0" x:Name="ListViewMedics">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Médicaments offerts" Width="360" x:Name="Medics"/>
+                    <GridViewColumn Header="Quantité" Width="120" x:Name="Quantite"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </StackPanel>
+
+</UserControl>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using gsb_CRvisite.Classes;
 
 namespace gsb_CRvisite
 {
@@ -23,6 +24,22 @@ namespace gsb_CRvisite
         public frmMedicament()
         {
             InitializeComponent();
+            listeMedicaments.ItemsSource = Manager.ChargerMedicaments();
         }
+
+        private void SelectMedic(object sender, SelectionChangedEventArgs e)
+        {
+            Medicament m = Manager.GetMedicament(listeMedicaments.SelectedIndex);
+            Famille f = Manager.GetFamilleDuMedicament(m);
+
+            AffichId.Text = m.Id.ToString();
+            AffichNomC.Text = m.NomCommercial.ToString();
+            AffichEffets.Text = m.Effets.ToString();
+            AffichCompo.Text = m.Composition.ToString();
+            AfficheContreIndic.Text = m.Contreindications.ToString();
+            AffichFamille.Text = f.Libelle.ToString();
+        }
+
+        
     }
 }
