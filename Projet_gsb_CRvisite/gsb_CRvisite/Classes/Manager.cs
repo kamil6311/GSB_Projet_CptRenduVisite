@@ -64,7 +64,12 @@ namespace gsb_CRvisite.Classes
             medicament.Famille = laFamille;
             return laFamille;
         }
-        
+
+        /// <summary>
+        /// Accesseur en lecture pour un médecin
+        /// </summary>
+        /// <param name="index">index du médecin voulu</param>
+        /// <returns>le médecin correspondant à l'index</returns>
         public static Medecin GetMedecin(int index)
         {
             return lesMedecins[index];
